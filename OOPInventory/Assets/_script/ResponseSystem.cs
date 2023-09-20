@@ -2,17 +2,22 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ResponseSystem : MonoBehaviour
+public class ResponseSystem : MonoBehaviour, IObserver
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] Subject subject;
+
+    public void OnNotify(Actions actions)
     {
-        
+        //observer response controll...
     }
 
-    // Update is called once per frame
-    void Update()
+    public void OnEnable()
     {
-        
+        subject.AddObserver(this);
+    }
+
+    public void OnDisable()
+    {
+        subject.RemoveObserver(this);
     }
 }
