@@ -6,7 +6,7 @@ public class ResponseSystem : MonoBehaviour, IObserver
 {
     [SerializeField] Subject subject;
 
-    public void OnNotify(Actions actions)
+    public void OnNotify(Actions action)
     {
         //observer response controll...
     }

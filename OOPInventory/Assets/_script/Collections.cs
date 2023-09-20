@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public interface IObserver
+public abstract class Collections : MonoBehaviour
 {
-    public void OnNotify(Actions action);
+    
 }
