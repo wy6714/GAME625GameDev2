@@ -6,5 +6,6 @@ public enum Actions
 {
     getFlower,
     getTrash,
-    getStar
+    getStar,
+    gameOver
 }

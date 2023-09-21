@@ -2,8 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
-public class ResponseSystem : Collections, IObserver
+public class ResponseSystem : Subject, IObserver
 {
     
     [SerializeField] Subject subject;
@@ -16,6 +17,8 @@ public class ResponseSystem : Collections, IObserver
     public TextMeshProUGUI NotificationText;
 
     public AudioSource collectSound;
+    public AudioSource trashSound;
+    public AudioSource starSound;
     void Start()
     {
         foreach (Subject subject in FindObjectsOfType<Subject>())
@@ -28,6 +31,11 @@ public class ResponseSystem : Collections, IObserver
         ScoreText.text = "Score: " + Score.ToString();
         LifeText.text = "Life: " + Life.ToString();
         NotificationText.text = notification;
+
+        if (Life < 0)
+        {
+            NotifyObservers(Actions.gameOver);
+        }
     }
 
     public void OnNotify(Actions action)
@@ -40,13 +48,18 @@ public class ResponseSystem : Collections, IObserver
                 notification = "You Collected a flower! +5 Points";
                 return;
             case(Actions.getTrash):
+                trashSound.Play();
                 Life += Trash.life;
                 notification = "That's Trash! You lost 1 life!";
                 return;
             case (Actions.getStar):
+                starSound.Play();
                 Life += Star.life;
                 Score += Star.point;
                 notification = "Nice Job! That's the only star in this game! +10 Points, +1 life";
+                return;
+            case (Actions gameOver):
+                SceneManager.LoadScene("gameMode");
                 return;
         }
     }
