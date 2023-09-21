@@ -14,18 +14,18 @@ public class player : Subject
     // Update is called once per frame
     void Update()
     {
-        Vector3 newPosition = transform.position + Vector3.right * moveSpeed * Time.deltaTime;
+        Vector3 newPosition = transform.position + Vector3.forward * moveSpeed * Time.deltaTime;
         transform.position = newPosition;
 
-        if(Input.GetKeyUp(KeyCode.UpArrow) && transform.position.z < 80)
+        if(Input.GetKeyUp(KeyCode.LeftArrow) && transform.position.x > -40)
         {
            
-            transform.position += new Vector3(0f, 0f, 40f);
+            transform.position += new Vector3(-40f, 0f, 0f);
         }
 
-        if (Input.GetKeyUp(KeyCode.DownArrow) && transform.position.z > 0 )
+        if (Input.GetKeyUp(KeyCode.RightArrow) && transform.position.x < 40 )
         {
-            transform.position += new Vector3(0f, 0f, -40f);
+            transform.position += new Vector3(40f, 0f, 0f);
         }
     }
 

@@ -2,9 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MainCamera : MonoBehaviour
+public class TrashScript : Subject
 {
-    public float moveSpeed = 50f;
     // Start is called before the first frame update
     void Start()
     {
@@ -14,8 +13,15 @@ public class MainCamera : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
+    }
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            NotifyObservers(Actions.getTrash);
+            Destroy(gameObject);
 
-        Vector3 newPosition = transform.position + Vector3.forward * moveSpeed * Time.deltaTime;
-        transform.position = newPosition;
+        }
     }
 }
