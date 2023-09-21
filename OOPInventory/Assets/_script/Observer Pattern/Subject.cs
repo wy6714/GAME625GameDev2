@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -18,6 +19,10 @@ public abstract class Subject : MonoBehaviour
 
     public void NotifyObservers(Actions action)
     {
-        observerList.ForEach(observer => observer.OnNotify(action));
+        foreach(IObserver observer in observerList)
+        {
+            observer.OnNotify(action);
+        }
+        
     }
 }

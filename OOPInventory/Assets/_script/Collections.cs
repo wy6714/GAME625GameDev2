@@ -4,5 +4,7 @@ using UnityEngine;
 
 public abstract class Collections : MonoBehaviour
 {
-    
+    protected int point;
+    protected int life;
 }
+
