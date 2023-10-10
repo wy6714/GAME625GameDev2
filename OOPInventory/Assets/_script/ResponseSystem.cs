@@ -46,7 +46,7 @@ public class ResponseSystem : Subject, IObserver
                 collectSound.Play();
                 Score += Flower.point;
                 notification = "You Collected a flower! +5 Points";
-                return;
+                return;//out of OnNotify()
             case(Actions.getTrash):
                 trashSound.Play();
                 Life += Trash.life;
