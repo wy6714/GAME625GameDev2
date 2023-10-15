@@ -38,8 +38,7 @@ public class Cell : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player") && state == 1)
         {
-            Destroy(other.gameObject);
-            SceneManager.LoadScene("gameOverScene");
+            Debug.Log("Player On the Wrong Way! ");
 
         }
     }

@@ -4,69 +4,78 @@ using UnityEngine;
 
 public class Player :MonoBehaviour
 {
-    
+
+    private CommandInvoker commandInvoker = new CommandInvoker();
+    private Vector3 originalPosition;
 
     // Start is called before the first frame update
     void Start()
     {
-       
+        originalPosition = transform.position;
     }
 
     // Update is called once per frame
     void Update()
     {
-        Vector3 pos = transform.position;
+        Vector3 newPosition = transform.position;
         if (Input.GetKeyUp(KeyCode.UpArrow))
         {
-            if (pos.z >= 20.9f)
+            if (newPosition.z >= 20.9f)
             {
-                pos.z = 20.9f;
+                newPosition.z = 20.9f;
             }
             else
             {
-                pos.z = pos.z + 1.1f;
+                newPosition.z = newPosition.z + 1.1f;
+                MoveCommand moveCommand = new MoveCommand(transform, transform.position, newPosition);
+                commandInvoker.ExecuteCommand(moveCommand);
+                
             }
-            
-            transform.position = pos;
         }
         if (Input.GetKeyUp(KeyCode.DownArrow))
         {
-            if (pos.z <= 0)
+            if (newPosition.z <= 0)
             {
-                pos.z = 0;
+                newPosition.z = 0;
             }
             else
             {
-                pos.z = pos.z - 1.1f;
+                newPosition.z = newPosition.z - 1.1f;
+                MoveCommand moveCommand = new MoveCommand(transform, transform.position, newPosition);
+                commandInvoker.ExecuteCommand(moveCommand);
             }
-            
-            transform.position = pos;
         }
         if (Input.GetKeyUp(KeyCode.LeftArrow))
         {
-            if (pos.x <= 0)
+            if (newPosition.x <= 0)
             {
-                pos.x = 0;
+                newPosition.x = 0;
             }
             else
             {
-                pos.x = pos.x - 1.1f;
+                newPosition.x = newPosition.x - 1.1f;
+                MoveCommand moveCommand = new MoveCommand(transform, transform.position, newPosition);
+                commandInvoker.ExecuteCommand(moveCommand);
             }
-            
-            transform.position = pos;
         }
         if (Input.GetKeyUp(KeyCode.RightArrow))
         {
-            if (pos.x >= 20.9f)
+            if (newPosition.x >= 20.9f)
             {
-                pos.x = 20.9f;
+                newPosition.x = 20.9f;
             }
             else
             {
-                pos.x = pos.x + 1.1f;
+                newPosition.x = newPosition.x + 1.1f;
+                MoveCommand moveCommand = new MoveCommand(transform, transform.position, newPosition);
+                commandInvoker.ExecuteCommand(moveCommand);
             }
-            
-            transform.position = pos;
+        }
+
+        //Rewind
+        if (Input.GetKeyUp(KeyCode.Z))
+        {
+            commandInvoker.UndoLastCommand();
         }
     }
 

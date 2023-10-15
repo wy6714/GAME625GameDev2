@@ -16,9 +16,12 @@ public class CommandInvoker
     {
         if (moveHistory.Count > 0)
         {
-            Command lastCommand = moveHistory.Pop();
+            Command lastCommand = moveHistory.Pop(); 
             lastCommand.Undo();
-            
+        }
+        else
+        {
+            Debug.Log("You are in the first step!");
         }
     }
 }
