@@ -13,6 +13,10 @@ public class GameOfLife : MonoBehaviour
     float spacing = 0.1f;
     public GameObject targetPrefab;
 
+    int[,] newCells;
+    int[,] originalCells;
+    CommandInvoker commandInvoker = new CommandInvoker();
+
     
     // Start is called before the first frame update
     void Start()
@@ -20,6 +24,8 @@ public class GameOfLife : MonoBehaviour
         
 
         cells = new Cell[rows, columns];
+        newCells = new int[rows, columns];
+        originalCells = new int[rows, columns];
 
         Vector3 targetPos = new Vector3(20.9f, 0, 20.9f);
         GameObject targetObj = Instantiate(targetPrefab, targetPos, transform.rotation);
@@ -40,13 +46,18 @@ public class GameOfLife : MonoBehaviour
                 cells[x, y].y = y;
                 cells[x, y].neighbors = 0;
                 cells[x, y].state = Random.Range(0,2);
+
+                originalCells[x, y] = cells[x, y].state;
                 
                 Debug.Log("x: " + cells[x, y].x + " y: " + cells[x, y].y + " state: " + cells[x, y].state);  
                 
             }
         }
         cells[0, 0].state = 0;
+        originalCells[0, 0] = 0;
+        
         countNeghbors();
+        //originalCells = cells;
 
     }
 
@@ -55,8 +66,38 @@ public class GameOfLife : MonoBehaviour
     {
         if (Input.GetKeyUp(KeyCode.UpArrow)|| Input.GetKeyUp(KeyCode.DownArrow) || Input.GetKeyUp(KeyCode.LeftArrow)|| Input.GetKeyUp(KeyCode.RightArrow))
         {
+            for (int x = 0; x < rows; x++)
+            {
+                for (int y = 0; y < columns; y++)
+                {
+                    originalCells[x, y] = cells[x, y].state;
+                }
+            }
             countNeghbors();
             PopulationControl();
+            for (int x = 0; x < rows; x++)
+            {
+                for (int y = 0; y < columns; y++)
+                {
+                    newCells[x, y] = cells[x, y].state;
+                }
+            }
+            BoardCommand boardCommand = new BoardCommand(cells, originalCells, newCells);
+            commandInvoker.ExecuteCommand(boardCommand);
+            
+        }
+        if (Input.GetKeyUp(KeyCode.Z))
+        {
+            commandInvoker.UndoLastCommand();
+            for (int x = 0; x < rows; x++)
+            {
+                for (int y = 0; y < columns; y++)
+                {
+                    cells[x,y].UpdateColor();
+                }
+            }
+            //countNeghbors();
+            //PopulationControl();
         }
         
     }
@@ -139,7 +180,10 @@ public class GameOfLife : MonoBehaviour
                     }
                 }
             }
+                
         }
+
+        //newCells = cells;
     }
 
     public void automata()
