@@ -12,9 +12,23 @@ public class BoardCommand : Command
 
     public BoardCommand(Cell[,] cells, int[,] originalCells, int[,] newCells)
     {
-        this.cells = cells;
-        this.originalCells = originalCells;
-        this.newCells = newCells;
+        //deep copy array
+        //this.cells = cells;
+        //this.originalCells = originalCells;
+        //this.newCells = newCells;
+        this.cells = new Cell[rows, columns];
+        this.originalCells = new int[rows, columns];
+        this.newCells = new int[rows, columns];
+        for (int x = 0; x < rows; x++)
+        {
+            for (int y = 0; y < columns; y++)
+            {
+                this.cells[x, y] = cells[x, y];
+                this.originalCells[x, y] = originalCells[x, y];
+                this.newCells[x, y] = newCells[x, y];
+            }
+        }
+
     }
 
     public override void Execute()
@@ -32,14 +46,17 @@ public class BoardCommand : Command
 
     public override void Undo()
     {
+        string printText = "";
         for (int x = 0; x < rows; x++)
         {
             for (int y = 0; y < columns; y++)
             {
+                printText += originalCells[x, y].ToString();
                 cells[x, y].state = originalCells[x, y];
                 cells[x, y].UpdateColor();
             }
         }
+        Debug.Log(printText);
         //cells = originalCells;
     }
 
