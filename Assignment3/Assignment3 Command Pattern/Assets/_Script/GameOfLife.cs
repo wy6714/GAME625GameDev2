@@ -66,38 +66,15 @@ public class GameOfLife : MonoBehaviour
     {
         if (Input.GetKeyUp(KeyCode.UpArrow)|| Input.GetKeyUp(KeyCode.DownArrow) || Input.GetKeyUp(KeyCode.LeftArrow)|| Input.GetKeyUp(KeyCode.RightArrow))
         {
-            for (int x = 0; x < rows; x++)
-            {
-                for (int y = 0; y < columns; y++)
-                {
-                    originalCells[x, y] = cells[x, y].state;
-                }
-            }
             countNeghbors();
             PopulationControl();
-            for (int x = 0; x < rows; x++)
-            {
-                for (int y = 0; y < columns; y++)
-                {
-                    newCells[x, y] = cells[x, y].state;
-                }
-            }
             BoardCommand boardCommand = new BoardCommand(cells, originalCells, newCells);
             commandInvoker.ExecuteCommand(boardCommand);
             
         }
         if (Input.GetKeyUp(KeyCode.Z))
         {
-            commandInvoker.UndoLastCommand();
-            for (int x = 0; x < rows; x++)
-            {
-                for (int y = 0; y < columns; y++)
-                {
-                    cells[x,y].UpdateColor();
-                }
-            }
-            //countNeghbors();
-            //PopulationControl();
+            commandInvoker.UndoLastCommand();            
         }
         
     }
@@ -161,6 +138,9 @@ public class GameOfLife : MonoBehaviour
         {
             for(int y =0; y<rows; y++)
             {
+                //for rewind
+                originalCells[x, y] = cells[x, y].state;
+
                 //Rule:
                 //live -> 2<neighbors<3 ->live
                 //dead -> 3neighbor -> live
@@ -169,21 +149,25 @@ public class GameOfLife : MonoBehaviour
                 {
                     if (cells[x,y].neighbors != 2 && cells[x, y].neighbors != 3)
                     {
-                        cells[x, y].state = 0;
+                        //cells[x, y].state = 0;
+                        newCells[x, y] = 0;
                     }
                 }
                 else
                 {
                     if (cells[x,y].neighbors == 3)
                     {
-                        cells[x, y].state = 1;
+                        //cells[x, y].state = 1;
+                        newCells[x, y] = 1;
                     }
                 }
+
+                //command
+                //cells[x, y].state = newCells[x, y];
             }
                 
         }
-
-        //newCells = cells;
+        
     }
 
     public void automata()

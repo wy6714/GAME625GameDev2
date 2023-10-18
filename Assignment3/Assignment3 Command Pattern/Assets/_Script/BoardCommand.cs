@@ -37,6 +37,7 @@ public class BoardCommand : Command
             for (int y = 0; y < columns; y++)
             {
                 cells[x, y].state = originalCells[x, y];
+                cells[x, y].UpdateColor();
             }
         }
         //cells = originalCells;
