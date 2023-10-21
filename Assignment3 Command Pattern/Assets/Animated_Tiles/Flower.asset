@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13b75c95f34a00d4e8c04f76b73312e6, type: 3}
+  m_Name: Flower
+  m_EditorClassIdentifier: 
+  m_AnimatedSprites:
+  - {fileID: 21300000, guid: 15cd44ceac10c40d5a443a1592ea5f5f, type: 3}
+  - {fileID: 21300000, guid: b814db6240ad74d4086e28a086c35b3b, type: 3}
+  - {fileID: 21300000, guid: c838650c6a6a44828be3280906b22492, type: 3}
+  - {fileID: 21300000, guid: c6814cf77ac7f40f2a3764fb478c689d, type: 3}
+  - {fileID: 21300000, guid: 15e26e16d6da54d8ab66b0314b431229, type: 3}
+  - {fileID: 21300000, guid: 8556640acf7084847a9f3c9fd2c99747, type: 3}
+  - {fileID: 21300000, guid: 2d8c0422c06844b33acd22121c3b5243, type: 3}
+  - {fileID: 21300000, guid: aa23308668ce347f5a47e812b67b7309, type: 3}
+  - {fileID: 21300000, guid: 766cb99cb082b4aba9f0033285b00ef4, type: 3}
+  - {fileID: 21300000, guid: 9feb062b6a10d434cb0e3862b0ba7769, type: 3}
+  - {fileID: 21300000, guid: 55c130e828a2745c6ba42217d5db5bd5, type: 3}
+  - {fileID: 21300000, guid: 7ffa0f39e96e449268e7c6d572ebe6f4, type: 3}
+  - {fileID: 21300000, guid: 26866841eddc3476db8bb25515191b65, type: 3}
+  - {fileID: 21300000, guid: 55b552e29e4014e5799c0cd42f71c820, type: 3}
+  m_MinSpeed: 1
+  m_MaxSpeed: 1
+  m_AnimationStartTime: 0
+  m_AnimationStartFrame: 0
+  m_TileColliderType: 0
+  m_TileAnimationFlags: 0

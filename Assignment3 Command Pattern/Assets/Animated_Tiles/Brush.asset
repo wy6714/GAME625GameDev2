@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13b75c95f34a00d4e8c04f76b73312e6, type: 3}
+  m_Name: Brush
+  m_EditorClassIdentifier: 
+  m_AnimatedSprites:
+  - {fileID: 21300000, guid: bd9f0f5412a4c40339a91f7d1618337f, type: 3}
+  - {fileID: 21300000, guid: 891ae034f7e9a4ac587b37822a519792, type: 3}
+  - {fileID: 21300000, guid: d2b6ca7ff58454225a527b7b574d9f12, type: 3}
+  - {fileID: 21300000, guid: 5ff711b5b167646df88f1b0b3617a61d, type: 3}
+  - {fileID: 21300000, guid: 1256d356c45364cf9831c139e93b0200, type: 3}
+  - {fileID: 21300000, guid: c66eb318d3ee44f3197d3c380252dd56, type: 3}
+  - {fileID: 21300000, guid: cd4fdf483f3ab45708e718404dd3e5c0, type: 3}
+  - {fileID: 21300000, guid: 8ad638dd3d72e490d9a7ac93f5f04001, type: 3}
+  - {fileID: 21300000, guid: c8fef0d51ae5e4ca08a694b36d8b98b4, type: 3}
+  - {fileID: 21300000, guid: 1841b0522a372441bac93164038249af, type: 3}
+  - {fileID: 21300000, guid: aa82133b6dccd42c4a18a527f366b576, type: 3}
+  - {fileID: 21300000, guid: e14ada8326a82492cbcb190ce7ae0fdf, type: 3}
+  - {fileID: 21300000, guid: 9374eeaeb407943fe96440f5959039b1, type: 3}
+  - {fileID: 21300000, guid: ed9f851318df54129bb6bf98a7d03d44, type: 3}
+  m_MinSpeed: 1
+  m_MaxSpeed: 1
+  m_AnimationStartTime: 0
+  m_AnimationStartFrame: 0
+  m_TileColliderType: 0
+  m_TileAnimationFlags: 0

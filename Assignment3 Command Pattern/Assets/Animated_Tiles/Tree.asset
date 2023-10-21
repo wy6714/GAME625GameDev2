@@ -12,7 +12,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13b75c95f34a00d4e8c04f76b73312e6, type: 3}
   m_Name: Tree
   m_EditorClassIdentifier: 
-  m_AnimatedSprites: []
+  m_AnimatedSprites:
+  - {fileID: 21300000, guid: 9794c769a96bb4bc993472aea2c1e559, type: 3}
+  - {fileID: 21300000, guid: 1c38ab8f3ab524345b595f7217e4a6a5, type: 3}
+  - {fileID: 21300000, guid: d7d9c96b420794a4599e6ac54272fdad, type: 3}
+  - {fileID: 21300000, guid: a5ff7401d42e14115b3c256cb79464bd, type: 3}
+  - {fileID: 21300000, guid: a9b8f104a461845579a12efceaec7fb2, type: 3}
+  - {fileID: 21300000, guid: 46c4d5a023dfa4f19b8eb4b8ccea5f8f, type: 3}
+  - {fileID: 21300000, guid: 1455df1a298814247974d2e6dc951959, type: 3}
+  - {fileID: 21300000, guid: 97d4f89f1b5b14bbc92fe7cfba7e98f5, type: 3}
+  - {fileID: 21300000, guid: e907d14941ba4406db23b75f914b04cb, type: 3}
+  - {fileID: 21300000, guid: a2dde9e45e6cd4a6e89eefc11317c2e9, type: 3}
+  - {fileID: 21300000, guid: 21d3852ef23ce4e37b352c26264d9b9a, type: 3}
+  - {fileID: 21300000, guid: b5bd5e3d2feea42bfb1d182a103121b5, type: 3}
+  - {fileID: 21300000, guid: 3df0d28dc95e14a72898b4a686deaf5b, type: 3}
+  - {fileID: 21300000, guid: 08b43f944160c4ad4af70f0a2aaa7864, type: 3}
   m_MinSpeed: 1
   m_MaxSpeed: 1
   m_AnimationStartTime: 0
