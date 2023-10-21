@@ -95,7 +95,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0b5411a619b54262a7d64f1eb870d04, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rend: {fileID: 0}
+  rend: {fileID: 5681438085484318574}
   aliveColor: {r: 0.46602374, g: 0.9137255, b: 0.13333331, a: 0.83137256}
   deadColor: {r: 0.9528302, g: 0.91237986, b: 0.91237986, a: 0}
   x: 0
