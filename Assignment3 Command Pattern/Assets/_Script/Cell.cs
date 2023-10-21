@@ -9,14 +9,16 @@ public class Cell : MonoBehaviour
     public Renderer rend;
     public Color aliveColor;
     public Color deadColor;
-    
+    public MeshRenderer meshRenderer;
+
 
     public int x, y, neighbors, state;
 
     private void Start()
     {
         rend = gameObject.GetComponentInChildren<Renderer>();
-        
+        meshRenderer = GetComponentInChildren<MeshRenderer>();
+
     }
     private void Update()
     {
@@ -27,12 +29,14 @@ public class Cell : MonoBehaviour
     {
         if (state == 1)
         {
-            rend.material.color = aliveColor;
-            
+            //rend.material.color = aliveColor;
+            meshRenderer.enabled = true;
+
         }
         else
         {
-            rend.material.color = aliveColor;
+            //rend.material.color = aliveColor;
+            meshRenderer.enabled = false;
         }
     }
 

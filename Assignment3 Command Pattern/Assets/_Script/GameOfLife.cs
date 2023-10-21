@@ -57,7 +57,7 @@ public class GameOfLife : MonoBehaviour
         originalCells[0, 0] = 0;
         
         countNeghbors();
-        //originalCells = cells;
+        
 
     }
 
@@ -75,15 +75,7 @@ public class GameOfLife : MonoBehaviour
         if (Input.GetKeyUp(KeyCode.Z))
         {
             commandInvoker.UndoLastCommand();
-            /*for (int x = 0; x < rows; x++)
-            {
-                for (int y = 0; y < columns; y++)
-                {
-                    //cells[x, y].state = newCells[x,y];
-                    cells[x, y].state = originalCells[x,y];
-                    cells[x, y].UpdateColor();
-                }
-            }*/
+            
         }
         
     }
@@ -171,8 +163,7 @@ public class GameOfLife : MonoBehaviour
                     }
                 }
 
-                //command
-                //cells[x, y].state = newCells[x, y];
+                
             }
                 
         }
