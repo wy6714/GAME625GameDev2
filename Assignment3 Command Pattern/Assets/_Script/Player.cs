@@ -7,11 +7,13 @@ public class Player :MonoBehaviour
 
     private CommandInvoker commandInvoker = new CommandInvoker();
     private Vector3 originalPosition;
+    [SerializeField] GameObject wrongWayPanel;
 
     // Start is called before the first frame update
     void Start()
     {
         originalPosition = transform.position;
+        wrongWayPanel.SetActive(false);
     }
 
     // Update is called once per frame
@@ -77,6 +79,7 @@ public class Player :MonoBehaviour
         {
            
             commandInvoker.UndoLastCommand();
+            wrongWayPanel.SetActive(false);
         }
     }
 
@@ -88,6 +91,14 @@ public class Player :MonoBehaviour
             Destroy(other.gameObject);
             Debug.Log("collide with Target");
             
+        }
+        if (other.gameObject.CompareTag("cell"))
+        {
+            Cell cellState = other.gameObject.GetComponent<Cell>();
+            if(cellState.state == 1)
+            {
+                wrongWayPanel.SetActive(true);
+            }
         }
         
     }
