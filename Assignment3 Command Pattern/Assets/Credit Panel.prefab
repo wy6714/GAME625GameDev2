@@ -289,7 +289,11 @@ MonoBehaviour:
 
 
     Font
-    by MjType: https://www.dafont.com/milku.font?back=author'
+    by MjType: https://www.dafont.com/milku.font?back=author
+
+
+    Music Games Worldbeat
+    by Bernardo R on MixKit'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e80ac03052e114c979fe40c3f62f0d3d, type: 2}
   m_sharedMaterial: {fileID: -4333015160752398008, guid: e80ac03052e114c979fe40c3f62f0d3d, type: 2}

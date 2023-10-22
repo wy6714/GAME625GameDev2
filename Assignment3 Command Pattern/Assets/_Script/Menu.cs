@@ -7,11 +7,13 @@ public class Menu : MonoBehaviour
 {
     [SerializeField] GameObject creditPanel;
     [SerializeField] GameObject rulePanel;
+    [SerializeField] AudioSource playAudio;
  
     private void Start()
     {
         creditPanel.SetActive(false);
         rulePanel.SetActive(false);
+        playAudio.Play();
     }
     private void Update()
     {
