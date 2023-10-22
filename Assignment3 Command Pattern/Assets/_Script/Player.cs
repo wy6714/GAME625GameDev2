@@ -75,6 +75,7 @@ public class Player :MonoBehaviour
         //Rewind
         if (Input.GetKeyUp(KeyCode.Z))
         {
+           
             commandInvoker.UndoLastCommand();
         }
     }
@@ -88,5 +89,6 @@ public class Player :MonoBehaviour
             Debug.Log("collide with Target");
             
         }
+        
     }
 }

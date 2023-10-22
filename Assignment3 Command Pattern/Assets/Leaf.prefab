@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 1667225002920651652}
   m_Layer: 0
   m_Name: Leaf
-  m_TagString: Untagged
+  m_TagString: cell
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -98,6 +98,8 @@ MonoBehaviour:
   rend: {fileID: 123220131235417030}
   aliveColor: {r: 0.8773585, g: 0.79872733, b: 0.79872733, a: 0.09803922}
   deadColor: {r: 0.71822536, g: 0.8301887, b: 0.5991456, a: 0}
+  meshRenderer: {fileID: 0}
+  wrongWayPanel: {fileID: 0}
   x: 0
   y: 0
   neighbors: 0

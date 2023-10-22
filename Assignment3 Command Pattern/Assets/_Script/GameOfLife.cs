@@ -74,9 +74,11 @@ public class GameOfLife : MonoBehaviour
         }
         if (Input.GetKeyUp(KeyCode.Z))
         {
+            
             commandInvoker.UndoLastCommand();
             
         }
+        
         
     }
 
@@ -178,8 +180,8 @@ public class GameOfLife : MonoBehaviour
             for(int y=0; y<rows; y++)
             {
                 cells[x, y].state = 0;
-                originalCells[x, y] = cells[x, y].state;
-                newCells[x, y] = cells[x,y].state;
+                //originalCells[x, y] = cells[x, y].state;
+                //newCells[x, y] = cells[x,y].state;
             }
         }
 
@@ -188,8 +190,8 @@ public class GameOfLife : MonoBehaviour
             for (int y = 5; y < 14; y += 8)
             {
                 cells[x, y].state = 1;
-                originalCells[x, y] = cells[x, y].state;
-                newCells[x, y] = cells[x, y].state;
+                //originalCells[x, y] = cells[x, y].state;
+                //newCells[x, y] = cells[x, y].state;
             }
 
         }
@@ -200,8 +202,8 @@ public class GameOfLife : MonoBehaviour
             for (int y = 7; y < 13; y += 4)
             {
                 cells[x, y].state = 1;
-                originalCells[x, y] = cells[x, y].state;
-                newCells[x, y] = cells[x, y].state;
+                //originalCells[x, y] = cells[x, y].state;
+                //newCells[x, y] = cells[x, y].state;
             }
 
         }
@@ -209,8 +211,8 @@ public class GameOfLife : MonoBehaviour
         for (int x = 3; x < 16; x++)
         {
             cells[x, 9].state = 1;
-            originalCells[x, 9] = cells[x, 9].state;
-            newCells[x, 9] = cells[x, 9].state;
+            //originalCells[x, 9] = cells[x, 9].state;
+            //newCells[x, 9] = cells[x, 9].state;
 
         }
 

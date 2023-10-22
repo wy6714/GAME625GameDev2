@@ -7,10 +7,15 @@ public class Menu : MonoBehaviour
 {
     [SerializeField] GameObject creditPanel;
     [SerializeField] GameObject rulePanel;
+ 
     private void Start()
     {
         creditPanel.SetActive(false);
         rulePanel.SetActive(false);
+    }
+    private void Update()
+    {
+        
     }
     public void PlayButton()
     {

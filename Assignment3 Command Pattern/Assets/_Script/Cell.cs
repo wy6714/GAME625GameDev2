@@ -11,17 +11,16 @@ public class Cell : MonoBehaviour
     public Color deadColor;
     public MeshRenderer meshRenderer;
 
-
     public int x, y, neighbors, state;
 
     private void Start()
     {
         rend = gameObject.GetComponentInChildren<Renderer>();
         meshRenderer = GetComponentInChildren<MeshRenderer>();
-
     }
     private void Update()
     {
+        
         UpdateColor();
     }
 
@@ -45,7 +44,6 @@ public class Cell : MonoBehaviour
         if (other.gameObject.CompareTag("Player") && state == 1)
         {
             Debug.Log("Player On the Wrong Way! ");
-
         }
     }
 }

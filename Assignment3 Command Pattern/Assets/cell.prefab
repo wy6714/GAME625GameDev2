@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 6233856714647874679}
   m_Layer: 0
   m_Name: cell
-  m_TagString: Untagged
+  m_TagString: cell
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -98,6 +98,7 @@ MonoBehaviour:
   rend: {fileID: 5681438085484318574}
   aliveColor: {r: 0.46602374, g: 0.9137255, b: 0.13333331, a: 0.83137256}
   deadColor: {r: 0.9528302, g: 0.91237986, b: 0.91237986, a: 0}
+  meshRenderer: {fileID: 0}
   x: 0
   y: 0
   neighbors: 0
