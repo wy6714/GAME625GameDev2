@@ -21,6 +21,8 @@ Sound Effect: mixkit
 
 ## Command Pattern
 
+[Source Code](https://github.com/wy6714/GAME625GameDev2/tree/main/Assignment3%20Command%20Pattern/Assets/_Script)
+
 **Credit**
 
 Free Field of Game Assets by GuttyKreum: https://twitter.com/GuttyKreum
