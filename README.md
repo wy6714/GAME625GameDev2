@@ -17,3 +17,16 @@ Music:
 Background music: Kenny
 
 Sound Effect: mixkit
+
+
+## Command Pattern
+
+**Credit**
+
+Free Field of Game Assets by GuttyKreum: https://twitter.com/GuttyKreum
+
+Simplistic Low Poly Nature by Acorn Bringer
+
+Font by MjType: https://www.dafont.com/milku.font?back=author
+
+Music Games Worldbeat by Bernardo R on MixKit
