@@ -9157,11 +9157,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1007544630815016412, guid: 6c1a63c37ff4740408d36be9bf14ec68, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3231880393095866182, guid: 6c1a63c37ff4740408d36be9bf14ec68, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5843224824533176349, guid: 6c1a63c37ff4740408d36be9bf14ec68, type: 3}
       propertyPath: m_TargetGraphic
@@ -9171,6 +9171,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1376387715}
+    - target: {fileID: 6156387531996008249, guid: 6c1a63c37ff4740408d36be9bf14ec68, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7315834689444016163, guid: 6c1a63c37ff4740408d36be9bf14ec68, type: 3}
       propertyPath: m_fontSize
       value: 20
