@@ -23,6 +23,8 @@ Sound Effect: mixkit
 
 [Source Code](https://github.com/wy6714/GAME625GameDev2/tree/main/Assignment3%20Command%20Pattern/Assets/_Script)
 
+[Play](https://wy6714.github.io/GAME625GameDev2/Games/LeafOfLife/)
+
 **Credit**
 
 Free Field of Game Assets by GuttyKreum: https://twitter.com/GuttyKreum
