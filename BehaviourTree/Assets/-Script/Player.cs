@@ -22,7 +22,7 @@ public class Player : MonoBehaviour
     private int powerUpPelletPoint = 100;
     private int lives = 3;
 
-    private bool enemyFrozen = false;
+    public bool enemyFrozen = false;
     
 
     public TextMeshProUGUI ScoreText;
